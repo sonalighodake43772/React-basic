@@ -48,8 +48,8 @@ const changeExpense=()=>
       </div>
       <div className="expense-item__price">{amount}</div>
 
-    <button onClick={clickhandler}>change title</button>
-    <button onClick={DeleteExpense}>DeleteExpense</button>
+    {/* <button onClick={clickhandler}>change title</button>
+    <button onClick={DeleteExpense}>DeleteExpense</button> */}
     <button onClick={changeExpense}>ChangeExpense</button>
     </div>
   );
