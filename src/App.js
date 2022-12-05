@@ -1,4 +1,5 @@
 import ExpenseItem from "./component/Expenses/ExpenseItem";
+import NewExpense from "./component/ExpenseForm/NewExpense";
 // import React from 'react';
 const App=()=> {
   let expenses = [
@@ -34,8 +35,7 @@ const App=()=> {
 
   return (
     <div>
-      <h2>Let's get started!</h2>
-
+     <NewExpense/>
       {/* if data are multiple means 100 or more than 100 then iterate through the loop
            expenses.map((item,i)=>
             <ExpenseItem data={item}/>) */}
@@ -65,6 +65,7 @@ const App=()=> {
         date={expenses[3].date}
         LocationOfExpenditure={expenses[3].LocationOfExpenditure}
         />
+        
     </div>
   );
 }
