@@ -1,5 +1,6 @@
 import ExpenseItem from "./component/Expenses/ExpenseItem";
 import NewExpense from "./component/ExpenseForm/NewExpense";
+import Expenses from "./component/Expenses/Expenses";
 import { useState } from "react";
 // import React from 'react';
 
@@ -30,7 +31,9 @@ const old_expenses = [
     date: new Date(2021, 5, 12),
   },
 ];
+
 const App = () => {
+  // display data dynamicalliy on ui
   const [expenses, setExpenses] = useState(old_expenses);
 
   const addExpenseHandler = (expense) => {
@@ -41,9 +44,10 @@ const App = () => {
   return (
     <div>
       <NewExpense onaddexpense={addExpenseHandler} />
-      {expenses.map((item, i) => (
+      {/* {expenses.map((item, i) => (
         <ExpenseItem data={item} />
-      ))}
+      ))} */}
+      <Expenses items={expenses}/>
     </div>
   );
 };
