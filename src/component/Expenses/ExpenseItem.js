@@ -1,18 +1,23 @@
 import ExpenseDate from "./ExpenseDate";
+
 import Card from '../UI/card';
 //  import ExpenseDetails from './ExpenseDetails';
 import "./ExpenseItem.css";
 // import React,{useState} from 'react';//required for older version of react
 
 const ExpenseItem = (props) => {
+ 
   return (
+    
+    
     <Card className="expense-item">
-      <ExpenseDate date={props.data.date} />
+     
+      <ExpenseDate date={props.date} />
 
       <div className="expense-item__description">
-        <h2>{props.data.title}</h2>
+        <h2>{props.title}</h2>
       </div>
-      <div className="expense-item__price">{props.data.amount}</div>
+      <div className="expense-item__price">{props.amount}</div>
 
       {/* <button onClick={clickhandler}>change title</button>
     <button onClick={DeleteExpense}>DeleteExpense</button> 
